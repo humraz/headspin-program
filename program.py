@@ -1,32 +1,42 @@
 def palindrome(num):
 	
-	num=str(num)
-	a=list(num)
-	a.reverse()
-	b=0
-	for i in a:
-		b=b*10+int(i)
-	
-	if b==int(num):
+	check=num
+	c=0
+	n=0
+	while((num)!=0):
+		
+		a=num%10
+		n=n*10+a
+		num=num/10
+
+	if check==n:
 		print "it is a palindrome"
 	else:
 		print "it is not a palindrome"
+		
+		
+	
+	
 	
 
 
 def listofdigits(num):
-	print list(str(num))
+	ls=[]
+	while(num!=0):
+		a=num%10
+		ls.append(a)
+		num=num/10
+
+	print ls[::-1]
 
 
 
 def series(num):
 	print "sum is "	
-	i=1
+	i=1.0
 	tot=1.0
 	for i in range(3,num+1,2):
-		i=float(i)
-		
-		tot=tot+1/i
+		tot=tot+1/float(i)
 	print tot
 		
 
